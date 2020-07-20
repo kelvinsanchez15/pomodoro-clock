@@ -15,11 +15,9 @@ export default function Break({
       <div id="break-decrement" onClick={handleBreakDecrementClick}>
         <AiOutlineMinusCircle />
       </div>
-      <div id="break-length">
-        <div>
-          <AiOutlineCoffee />
-        </div>
-        {breakTime / 60}
+      <div>
+        <AiOutlineCoffee />
+        <div id="break-length">{breakTime / 60}</div>
       </div>
       <div id="break-increment" onClick={handleBreakIncrementClick}>
         <AiOutlinePlusCircle />

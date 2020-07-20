@@ -13,12 +13,9 @@ export default function Session({
         <AiOutlineMinusCircle />
       </div>
       <div>
-        <div>
-          <BsBriefcase />
-        </div>
+        <BsBriefcase />
         <div id="session-length">{sessionTime / 60}</div>
       </div>
-
       <div id="session-increment" onClick={handleSessionIncrementClick}>
         <AiOutlinePlusCircle />
       </div>
