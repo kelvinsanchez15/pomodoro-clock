@@ -7,6 +7,7 @@ import Timer from "./components/Timer";
 function App() {
   const [breakTime, setBreakTime] = useState(300);
   const [sessionTime, setSessionTime] = useState(1500);
+  const [timeLeft, setTimeLeft] = useState(sessionTime);
 
   const handleBreakDecrementClick = () => {
     if (breakTime <= 60) {
@@ -32,17 +33,22 @@ function App() {
 
   return (
     <div className="App">
-      <Timer sessionTime={sessionTime} />
-      <Break
-        breakTime={breakTime}
-        handleBreakDecrementClick={handleBreakDecrementClick}
-        handleBreakIncrementClick={handleBreakIncrementClick}
-      />
-      <Session
-        sessionTime={sessionTime}
-        handleSessionDecrementClick={handleSessionDecrementClick}
-        handleSessionIncrementClick={handleSessionIncrementClick}
-      />
+      <div className="app-container">
+        <h1>Pomodoro Clock</h1>
+        <Timer timeLeft={timeLeft} />
+        <div className="time-setters-wrapper">
+          <Session
+            sessionTime={sessionTime}
+            handleSessionDecrementClick={handleSessionDecrementClick}
+            handleSessionIncrementClick={handleSessionIncrementClick}
+          />
+          <Break
+            breakTime={breakTime}
+            handleBreakDecrementClick={handleBreakDecrementClick}
+            handleBreakIncrementClick={handleBreakIncrementClick}
+          />
+        </div>
+      </div>
     </div>
   );
 }

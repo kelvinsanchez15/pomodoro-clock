@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function Timer({ sessionTime }) {
-  const [timeLeft, setTimeLeft] = useState(sessionTime);
-  let minutes = timeLeft / 60;
+export default function Timer({ timeLeft }) {
+  let minutes = Math.floor(timeLeft / 60);
   let seconds = timeLeft % 60;
   return (
     <div id="timer-label">
-      <h1>Status placeholder</h1>
       <div id="time-left">
-        {minutes}:{seconds}
+        {minutes < 10 ? "0" + minutes : minutes}:
+        {seconds < 10 ? "0" + seconds : seconds}
       </div>
+      <div>STATUS</div>
     </div>
   );
 }
