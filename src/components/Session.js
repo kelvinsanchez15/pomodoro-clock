@@ -16,7 +16,7 @@ export default function Session({
       >
         <AiOutlineMinusCircle />
       </div>
-      <div>
+      <div title="Session Length">
         <div className="time-setter-icon">
           <BsBriefcase />
         </div>

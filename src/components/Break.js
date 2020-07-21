@@ -19,7 +19,7 @@ export default function Break({
       >
         <AiOutlineMinusCircle />
       </div>
-      <div>
+      <div title="Break Length">
         <div className="time-setter-icon">
           <AiOutlineCoffee />
         </div>
