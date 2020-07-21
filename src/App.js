@@ -67,43 +67,38 @@ function App() {
   };
 
   const handleBreakDecrementClick = () => {
-    if (breakTime <= 60) {
-      return;
-    }
+    if (isRunning || breakTime <= 60) return;
     setBreakTime(breakTime - 60);
   };
 
   const handleBreakIncrementClick = () => {
-    if (breakTime >= 3600) {
-      return;
-    }
+    if (isRunning || breakTime >= 3600) return;
     setBreakTime(breakTime + 60);
   };
 
   const handleSessionDecrementClick = () => {
-    if (sessionTime <= 60) {
-      return;
-    }
+    if (isRunning || sessionTime <= 60) return;
     setSessionTime(sessionTime - 60);
   };
 
   const handleSessionIncrementClick = () => {
-    if (sessionTime >= 3600) {
-      return;
-    }
+    if (isRunning || sessionTime >= 3600) return;
     setSessionTime(sessionTime + 60);
   };
 
   return (
     <div className="App">
       <div className="app-container">
-        <h1>Pomodoro Clock</h1>
         <Timer timeLeft={timeLeft} isRunning={isRunning} status={status} />
         <div className="time-controls-wrapper">
-          <div id="start_stop" onClick={handleStartStopClick}>
+          <div
+            id="start_stop"
+            className="button"
+            onClick={handleStartStopClick}
+          >
             {isRunning ? <AiOutlinePauseCircle /> : <AiOutlinePlayCircle />}
           </div>
-          <div id="reset" onClick={handleResetClick}>
+          <div id="reset" className="button" onClick={handleResetClick}>
             <AiOutlineReload />
           </div>
         </div>

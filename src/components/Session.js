@@ -9,14 +9,24 @@ export default function Session({
 }) {
   return (
     <div id="session-label" className="time-setter">
-      <div id="session-decrement" onClick={handleSessionDecrementClick}>
+      <div
+        id="session-decrement"
+        className="button"
+        onClick={handleSessionDecrementClick}
+      >
         <AiOutlineMinusCircle />
       </div>
       <div>
-        <BsBriefcase />
+        <div className="time-setter-icon">
+          <BsBriefcase />
+        </div>
         <div id="session-length">{sessionTime / 60}</div>
       </div>
-      <div id="session-increment" onClick={handleSessionIncrementClick}>
+      <div
+        id="session-increment"
+        className="button"
+        onClick={handleSessionIncrementClick}
+      >
         <AiOutlinePlusCircle />
       </div>
     </div>

@@ -1,36 +1,42 @@
 .App {
-  text-align: center;
-  color: #ececec;
-  background-color: #222831;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  user-select: none;
+  background-color: #222831;
+  color: #ececec;
+  display: flex;
   font-size: 1.5em;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
 }
 
 .app-container {
-  /* background-color: darkslategray; */
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 320px;
 }
 
 .timer-wrapper {
-  width: 200px;
-  height: 200px;
-  border: 5px solid white;
+  align-items: center;
   border-radius: 100%;
+  border: 6px solid #9e3f3f;
   display: flex;
   flex-direction: column;
+  height: 300px;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 18px;
+  width: 300px;
+}
+
+#time-left {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .time-controls-wrapper {
   display: flex;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .time-setters-wrapper {
@@ -40,6 +46,16 @@
 }
 
 .time-setter {
-  display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.time-setter-icon {
+  font-size: 2em;
+}
+
+.button:hover {
+  cursor: pointer;
 }

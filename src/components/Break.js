@@ -12,14 +12,24 @@ export default function Break({
 }) {
   return (
     <div id="break-label" className="time-setter">
-      <div id="break-decrement" onClick={handleBreakDecrementClick}>
+      <div
+        id="break-decrement"
+        className="button"
+        onClick={handleBreakDecrementClick}
+      >
         <AiOutlineMinusCircle />
       </div>
       <div>
-        <AiOutlineCoffee />
+        <div className="time-setter-icon">
+          <AiOutlineCoffee />
+        </div>
         <div id="break-length">{breakTime / 60}</div>
       </div>
-      <div id="break-increment" onClick={handleBreakIncrementClick}>
+      <div
+        id="break-increment"
+        className="button"
+        onClick={handleBreakIncrementClick}
+      >
         <AiOutlinePlusCircle />
       </div>
     </div>
